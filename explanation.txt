@@ -1,0 +1,22 @@
+To solve problem recursively,
+if root is null, return null for LCA
+
+if root is a or b themselves, return root
+
+check if left child is a or b using method 
+check if right child is a or b using method
+
+if both left and right are not null, root is LCA (a and b are in separate subtrees with root as common)
+
+if left is not null, it is the LCA (has both a and b)
+else right is (has both a and b)
+
+this process repeats recursively for left and right subtree
+and then, each of theirs and so on...
+with a divide and conquer approach
+until all sub problems of simple parent, left child,
+right child BST computation are solved to derive
+LCA
+
+if not found (right and left are null) or empty (root is null), null is returned
+
