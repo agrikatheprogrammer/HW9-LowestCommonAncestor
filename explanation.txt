@@ -12,7 +12,7 @@ if left is not null, it is the LCA (has both a and b)
 else right is (has both a and b)
 
 this process repeats recursively for left and right subtree
-and then, each of theirs and so on...
+...
 with a divide and conquer approach
 until all sub problems of simple parent, left child,
 right child BST computation are solved to derive
