@@ -20,3 +20,16 @@ LCA
 
 if not found (right and left are null) or empty (root is null), null is returned
 
+for iterative solution,
+the same property whereby all left subtree is lesser and all right is greater,
+1. each node cannot have children with both of their val greater than its own (min of children val>node.val) and 2. it cannot have children with both of their val lesser than its own
+(node.val>max of children val).
+therefore, min and max of two given nodes are computed
+and iteratively, pointer goes from root down so long as iterative conditions 1 and 2 are not 
+met.
+if condition 1 fails, node goes to the right (node.val needs to be greater)
+and if condition 2 fails, node goes to the left (node.val needs to be lesser)
+and checking of properties occurs again, repeating above process until first node (LCA)
+to satisfy properties (two given nodes are in its left and right subtree of LCA
+or LCA are one of the two given nodes themselves i.e. equality of val) is returned
+
